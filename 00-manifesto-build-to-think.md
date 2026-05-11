@@ -1,33 +1,10 @@
 # 做就是最好的想 —— 5 个月 build 了 3 个 AI 产品，砍了 1 个
 
-> 作者：王善波 · 36 岁 · **杭州台满满科技 · 研发主管 + 硬件采购负责人**（跟随创始人 5+ 年）
+> 作者：王善波 · 36 岁 · 台满满科技技术合伙人
 >
-> 真实业务：500+ 球房 / 平台总流水 ¥30 亿 / 10 人研发部
+> 月烧 $2,000 / 6 亿 tokens 在 Claude Opus 等顶级模型上
 >
-> 业余月烧 $2,000 / 6 亿 tokens 在 Claude Opus 等顶级模型上
->
-> 这是 [《月烧 \$2,000 AI 反常识 SOP》](https://github.com/wangshanbo/ai-native-sop) 系列的 **第 0 篇 manifesto**。读完它，再读后面 10 篇你会理解我所有方法论的源头。
-
----
-
-> ## 📌 在你开始读之前 —— 这 5 个月我同时在做的事
->
-> 这篇文章只讲我业余时间 ship 的 3 个开源产品。但同样这 5 个月，**我的"主业"清单**是这样的：
->
-> | 主业 | 数字 |
-> |---|---|
-> | 球房客户 | 500+ 在线 |
-> | 平台总 GMV | ¥30 亿 |
-> | 研发团队 | 10 人，含 1 位浙大硕招进来的研发总监 |
-> | 5 个月团队 ship 功能 | 50+ 个生产功能（bug 率较低）|
-> | 我亲自下场写的模块 | 3 个：灯控 / ESC/POS 小票 / 订单定时任务 |
-> | OEM 工厂老板直达 | 6 类硬件 / 6 家工厂老板手机直拨 |
-> | 三方软硬件公司对接 | 6 家 |
-> | 展会 | 亲自上前线收球房老板需求 |
->
-> **重点不是炫耀，是想说清楚一件事**：下面讲的"5 个月业余 ship 3 个 AI 产品"不是在真空里发生的，是在上面这一堆"主业"之外，**用通勤 / 周末 / 晚上的零碎时间**做出来的。
->
-> 这本身就是这篇文章核心结论的最强证据：**AI 时代，"做"的成本被砍到了原来的 1/20，所以一个研发主管的"业余产出"，可以反过来比"主业产出"更值钱**。
+> 这是 [《月烧 2,000 AI 反常识 SOP》](https://github.com/wangshanbo/ai-native-sop) 系列的 **第 0 篇 manifesto**。读完它，再读后面 10 篇你会理解我所有方法论的源头。
 
 ---
 
@@ -67,16 +44,18 @@ Month 4-5: 同时 build Sentinel Web v2 + Guard（Rust）
 
 5 个月里我 ship 了：
 
-| 模块 | 状态 |
-|---|---|
-| **长程 Agent v0~v9**（10 个完整版本，每个独立 spec）| ✅ 全部完成 |
+
+| 模块                                                                                                                                                                                                                                              | 状态     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| **长程 Agent v0~v9**（10 个完整版本，每个独立 spec）                                                                                                                                                                                                          | ✅ 全部完成 |
 | **13+ 核心服务**：BudgetGovernor / HumanGate / EpisodicMemory / FailureTaxonomy / RollingPlanner / IsolatedReviewer / ExecutionTrace / SideEffectLedger / CommandRiskGate / UncertaintyEstimator / DenseReward / FormalAssertionRegistry / Dashboard | ✅ 全部跑通 |
-| **跨会话持久化**（trace / budget / sfx / failure / replan 全持久化）| ✅ |
-| **HITL 防失控**（自动 pause + 跨会话恢复）| ✅ |
-| **Token 预算回写 + 滚动 Replan** | ✅ |
-| **EpisodicMemory + BM25-lite 检索** | ✅ |
-| **CommandRiskGate**（low / medium / high / destructive 命令分级）| ✅ |
-| **LongHorizonDashboardPane**（5 个 tab 的可视化大盘）| ✅ |
+| **跨会话持久化**（trace / budget / sfx / failure / replan 全持久化）                                                                                                                                                                                        | ✅      |
+| **HITL 防失控**（自动 pause + 跨会话恢复）                                                                                                                                                                                                                  | ✅      |
+| **Token 预算回写 + 滚动 Replan**                                                                                                                                                                                                                      | ✅      |
+| **EpisodicMemory + BM25-lite 检索**                                                                                                                                                                                                               | ✅      |
+| **CommandRiskGate**（low / medium / high / destructive 命令分级）                                                                                                                                                                                     | ✅      |
+| **LongHorizonDashboardPane**（5 个 tab 的可视化大盘）                                                                                                                                                                                                    | ✅      |
+
 
 **这不是 demo，这是 5 个月每天写出来的工程系统。**
 
@@ -90,7 +69,7 @@ Month 4-5: 同时 build Sentinel Web v2 + Guard（Rust）
 
 这个结论，**我在 PPT 里推演 6 个月得不到。我在 build 了 6 个月之后立刻就懂了。**
 
-### 产品 2：Sentinel-Web v2（重写，正在做 · [公开 specs](https://github.com/wangshanbo/sentinel-specs)）
+### 产品 2：Sentinel-Web v2（重写，正在做）
 
 Web App 形态。一句话定位：
 
@@ -98,11 +77,13 @@ Web App 形态。一句话定位：
 
 直接对标 Bolt / Lovable / v0 / Replit Agent，但**核心差异化在 4 个字**："**不止帮你做出来，还陪你做下去。**"
 
-| Bolt / Lovable / v0 | Sentinel |
-|---|---|
-| 5 分钟做个 demo | 5 分钟出第一版 + 5 个月持续演化 |
-| 「做完就没下文」 | 上线后看数据 → 对话式优化 → A/B → 持续迭代 |
-| Demo 工厂 | 真实产品工厂 |
+
+| Bolt / Lovable / v0 | Sentinel                    |
+| ------------------- | --------------------------- |
+| 5 分钟做个 demo         | 5 分钟出第一版 + 5 个月持续演化         |
+| 「做完就没下文」            | 上线后看数据 → 对话式优化 → A/B → 持续迭代 |
+| Demo 工厂             | 真实产品工厂                      |
+
 
 技术形态：Web App + Node 后端 + 云端代码沙箱 + Anthropic 级长程 Agent 编排（NormCode 的领域逻辑直迁过来，省 2~3 个月）。
 
@@ -142,10 +123,12 @@ Rust 写的（性能 + 稳定 + 可嵌入），MCP server 形态可一键安装�
 
 来算笔账：
 
-| 时代 | 1 个完整产品的"做"成本 | 1 个"想错"的代价 |
-|---|---|---|
-| 传统开发（2010~2020）| 6 个月 × 5 人 = 30 人月（约 150 万 RMB）| 巨大，所以必须想清楚再做 |
-| AI 时代（2022~）| **5 个月 × 1 人 + AI = 约 1.5 人月**（含 \$2K/月 AI 投入约 7 万 RMB）| 小到可以接受"做了再砍" |
+
+| 时代              | 1 个完整产品的"做"成本                                         | 1 个"想错"的代价   |
+| --------------- | ----------------------------------------------------- | ------------ |
+| 传统开发（2010~2020） | 6 个月 × 5 人 = 30 人月（约 150 万 RMB）                       | 巨大，所以必须想清楚再做 |
+| AI 时代（2022~）    | **5 个月 × 1 人 + AI = 约 1.5 人月**（含 2K/月 AI 投入约 7 万 RMB） | 小到可以接受"做了再砍" |
+
 
 **成本砍到 1/20 = 决策模式必须从「想清楚再做」彻底翻转成「做了再砍再做」。**
 
@@ -207,12 +190,14 @@ Claude (LLM 基模)
 你的方法论不在你"想出来的理论"里。
 它在你**「build 过、踩过、砍过」的历史**里。
 
-| 别人写的 AI 文章 | 你能写的 AI 文章 |
-|---|---|
-| 《如何写好 prompt》（理论）| 《我做了一个长程 Agent IDE，10 个版本之后我把它砍了》|
-| 《AI agent 设计模式》（理论）| 《BudgetGovernor 我设计了 3 次，前 2 次错在哪里》|
-| 《AI 创业方向选择》（理论）| 《为什么我从 vscode fork 转向 Web App，6 个月血泪复盘》|
-| 《Rust 在 AI 时代》（理论）| 《我用 Rust 写了一个策略层 Guard，因为 MCP/Skills 都不够》|
+
+| 别人写的 AI 文章          | 你能写的 AI 文章                                |
+| ------------------- | ----------------------------------------- |
+| 《如何写好 prompt》（理论）   | 《我做了一个长程 Agent IDE，10 个版本之后我把它砍了》         |
+| 《AI agent 设计模式》（理论） | 《BudgetGovernor 我设计了 3 次，前 2 次错在哪里》       |
+| 《AI 创业方向选择》（理论）     | 《为什么我从 vscode fork 转向 Web App，6 个月血泪复盘》   |
+| 《Rust 在 AI 时代》（理论）  | 《我用 Rust 写了一个策略层 Guard，因为 MCP/Skills 都不够》 |
+
 
 **理论文章满世界都是。"我 build 了 X 学到 Y" 是真正稀缺的内容。**
 
@@ -233,7 +218,7 @@ Claude (LLM 基模)
 
 ### 铁律 3：用 AI 把「做」的成本降到接近 0
 
-每个月 \$2,000 在顶级 AI 上听起来很贵 —— 它实际上是把你的 build 成本砍了 95%。
+每个月 2,000 在顶级 AI 上听起来很贵 —— 它实际上是把你的 build 成本砍了 95%。
 **这是 AI 时代最划算的杠杆。**
 
 ---
@@ -252,15 +237,15 @@ Claude (LLM 基模)
 
 ## 关于这个连载
 
-这是 [《月烧 \$2,000 AI 反常识 SOP》](https://github.com/wangshanbo/ai-native-sop) 系列的 **第 0 篇 manifesto**。
+这是 [《月烧 2,000 AI 反常识 SOP》](https://github.com/wangshanbo/ai-native-sop) 系列的 **第 0 篇 manifesto**。
 
 接下来 10 篇会拆解：
 
 1. 你的 prompt 不是 prompt，是 SOP（已发布）
-2. 月烧 \$2,000 的工具组合论
+2. 月烧 2,000 的工具组合论
 3. 上下文工程 / 4 层金字塔
 4. God Class 4700 行用 AI 怎么动
-5. 月烧 \$2,000 的 ROI 计算
+5. 月烧 2,000 的 ROI 计算
 6. 长程 Agent vs 短链 Chat（这一篇我会拆 NormCode v0~v9 的设计血泪）
 7. AI 时代的"代码 review"：Verifier 工具环
 8. 跨端 + AI = 1 人 5 倍战力
@@ -277,4 +262,4 @@ Claude (LLM 基模)
 
 ---
 
-<sub>本文遵循 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议，转载请注明作者王善波 + 原文链接。</sub>
+本文遵循 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 协议，转载请注明作者王善波 + 原文链接。
