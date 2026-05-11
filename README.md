@@ -8,7 +8,7 @@
 
 ## 关于这个系列
 
-我是 [@wangshanbo](https://github.com/wangshanbo)，36 岁，杭州，**台满满科技技术合伙人**，11 年 B2B SaaS 实战。
+我是 [@wangshanbo](https://github.com/wangshanbo)，36 岁，杭州，**台满满科技 · 研发主管 + 硬件采购负责人**，11 年 B2B SaaS 实战。
 
 每个月在 Claude Opus 等顶级 AI 模型上的支出大约是 **$2,000**，token 用量持续在 **6 亿+**。
 
@@ -24,10 +24,11 @@
 |---|---|---|
 | **0** | **[做就是最好的想 — 5 个月 build 了 3 个 AI 产品，砍了 1 个](./00-manifesto-build-to-think.md)** | ✅ **Manifesto · 必读** |
 | 1 | [你的 prompt 不是 prompt，是 SOP](./01-prompt-is-sop.md) | ✅ 已发布 |
-| 2 | 月烧 $2,000 的工具组合论 — 为什么我同时用 Cursor / Claude Code / 自研 IDE / 不同模型 | 🚧 W2 |
+| **2** | **用最强模型写 SOP，用最差模型跑代码 — 我把团队 AI 成本砍到 1/10 还提速 5 倍的反常识公式** | 🔥 **W2 · 核心 IP（manifesto 已剧透）** |
 | 3 | 上下文工程才是 AI 时代真正的硬技能 — 4 层上下文金字塔实战 | 🚧 W2 |
 | 4 | God Class 4700 行用 AI 怎么动？— 我在生产代码上的真实实验 | 🚧 W3 |
-| 5 | 月烧 $2,000 的 ROI 计算 — 不是花钱，是 5~10 倍杠杆 | 🚧 W3 |
+| 5 | 月烧 $2,000 的工具组合论 — 为什么我同时用 Cursor / Claude Code / 自研 IDE / 不同模型 | 🚧 W3 |
+| ~~5~~ | ~~月烧 $2,000 的 ROI 计算~~ — 已并入第 2 篇 | ✂️ retired |
 | 6 | 长程 Agent vs 短链 Chat — 为什么我自研 IDE 押注长程 Harness | 🚧 W4 |
 | 7 | AI 时代的"代码 review"：Verifier 工具环 + Eval-driven | 🚧 W4 |
 | 8 | 跨端开发 + AI 的化学反应 — Flutter + AI = 1 人能干 5 人活 | 🚧 W5 |
