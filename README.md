@@ -22,6 +22,7 @@
 
 | # | 文章 | 状态 |
 |---|---|---|
+| **0** | **[做就是最好的想 — 5 个月 build 了 3 个 AI 产品，砍了 1 个](./00-manifesto-build-to-think.md)** | ✅ **Manifesto · 必读** |
 | 1 | [你的 prompt 不是 prompt，是 SOP](./01-prompt-is-sop.md) | ✅ 已发布 |
 | 2 | 月烧 $2,000 的工具组合论 — 为什么我同时用 Cursor / Claude Code / 自研 IDE / 不同模型 | 🚧 W2 |
 | 3 | 上下文工程才是 AI 时代真正的硬技能 — 4 层上下文金字塔实战 | 🚧 W2 |
@@ -46,9 +47,11 @@
 
 ---
 
-## 配套作品
+## 配套作品（Build to think 三部曲）
 
-- 🛡️ **[NormCode](https://github.com/wangshanbo/NormCode)** —— 我自研的 AI IDE（fork VS Code），内置 Sentinel 长程 Harness，对标 Anthropic 工作范式。这个仓库描述的方法论，几乎都是从 NormCode 的实战中沉淀出来的。
+- 🛡️ **[NormCode](https://github.com/wangshanbo/NormCode)** · v1 已 sunset —— 我用 5 个月 fork VS Code build 出来的长程 Agent IDE，10 个版本 / 13+ 服务全部上线后，我亲手砍掉了 vscode fork 这个形态。砍掉的代价 = 后面所有方法论的源头。
+- 🚀 **Sentinel** · v2 进行中 —— 重写为 Web App 的 AI 合伙人产品，让普通人通过对话做出真实可上线、可演化、可运营的全栈应用。直接对标 Bolt / Lovable / v0 / Replit Agent。
+- 🦀 **[Guard](https://github.com/wangshanbo/guard)** —— Rust 写的 AI 开发策略约束层，**MCP 让 AI 有手脚，Skills 让 AI 有经验，Guard 让 AI 不做错事**。
 - 👤 **[GitHub Profile](https://github.com/wangshanbo)** —— 我的能力地图与近期工作。
 
 ---
